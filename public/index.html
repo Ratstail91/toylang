@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF-8" />
+		<meta name="Content-Type" content="text/html" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="styles/index.css"/>
+
+		<title>The Toy Programming Language Online Interpreter</title>
+	<body>
+		<div class="central">
+			<h1 class="centered">The Toy Programming Language</h1>
+			<p class="centered"><a target="_blank" href="https://github.com/Ratstail91/Toy/blob/master/docs/reference_language.md">See the docs!</a></p>
+			<form onsubmit="run(); return false;" class="page">
+				<textarea id="input" rows="20" cols="100" class="panel"></textarea>
+				<br />
+				<button type="submit" class="panel centered" style="max-width: 200px; padding-top: 3px; padding-bottom: 3px; justify-content: center; align-items: center;">Run</button>
+				<br />
+				<output id="output" class="panel">Output goes here...</output>
+			</form>
+			<footer>
+				<p>Copyright Kayne Ruse, <a href="https://krgamestudios.com/">KR Game Studios</a> 2019</p>
+			</footer>
+		</div>
+		<script type="text/javascript" src="https://combinatronics.com/cure53/DOMPurify/master/dist/purify.min.js"></script>
+		<script type="text/javascript" src="scripts/index.js"></script>
+	</body>
+</html>
