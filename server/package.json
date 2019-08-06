@@ -4,12 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "forever -a -o forever.log -e error.log start index.js",
+    "restart": "forever -a -o forever.log -e error.log restart index.js",
+    "stop": "forever stop index.js",
+    "node": "node index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
-    "formidable": "^1.2.1"
+    "forever": "^1.0.0"
   }
 }
