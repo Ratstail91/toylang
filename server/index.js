@@ -4,6 +4,7 @@ var spawn = require('child_process').spawn;
 function runToyCode(req, res) {
 	let output = "";
 	let killed = false;
+	let finished = false;
 
 	console.log('running code', JSON.stringify(req.body));
 	var proc = spawn('mono', ['Toy/out/interpreter', 'run', req.body]);
@@ -29,18 +30,21 @@ function runToyCode(req, res) {
 	});
 
 	proc.on('close', code => {
-		console.log('close');
+//		console.log('close');
 		if (killed) {
 			res.end('process killed');
 		} else {
 			res.end(output);
 		}
+		finished = true;
 	});
 
 	setTimeout(() => {
-		console.log('killing');
-		proc.kill('SIGINT');
-		killed = true;
+		if (!finished) {
+			console.log('killing');
+			proc.kill('SIGINT');
+			killed = true;
+		}
 	}, 3000);
 }
 
