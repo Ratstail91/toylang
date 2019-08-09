@@ -9,15 +9,17 @@
 		<title>The Toy Programming Language Online Interpreter</title>
 	<body>
 		<div class="central">
-			<h1 class="centered">The Toy Programming Language</h1>
-			<p class="centered"><a target="_blank" href="https://github.com/Ratstail91/Toy/blob/master/docs/reference_language.md">See the docs!</a></p>
-			<form onsubmit="run(); return false;" class="page">
-				<textarea id="input" rows="20" cols="100" class="panel"></textarea>
-				<br />
-				<button type="submit" class="panel centered" style="max-width: 200px; padding-top: 3px; padding-bottom: 3px; justify-content: center; align-items: center;">Run</button>
-				<br />
-				<output id="output" class="panel">Output goes here...</output>
-			</form>
+			<div class="page">
+				<h1 class="centered">The Toy Programming Language</h1>
+				<p class="centered"><a target="_blank" href="https://github.com/Ratstail91/Toy/blob/master/docs/reference_language.md">See the docs!</a></p>
+				<form onsubmit="run(); return false;" class="panel">
+					<textarea id="input" rows="20" cols="100" class="panel"></textarea>
+					<br />
+					<button type="submit" class="panel centered" style="max-width: 200px; padding-top: 3px; padding-bottom: 3px; justify-content: center; align-items: center;">Run</button>
+					<br />
+					<output id="output" class="panel">Output goes here...</output>
+				</form>
+			</div>
 			<footer>
 				<p>Copyright Kayne Ruse, <a href="https://krgamestudios.com/">KR Game Studios</a> 2019</p>
 			</footer>
