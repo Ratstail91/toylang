@@ -11,21 +11,25 @@ function runToyCode(req, res) {
 
 	proc.stdout.setEncoding('utf8');
 	proc.stdout.on('data', data => {
-//		console.log('stdout:', data);
+//	console.log('stdout:', data);
 		output += data
 			.toString()
 			.split(/\r?\n/g)
 			.join('\n')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
 			;
 	});
 
 	proc.stderr.setEncoding('utf8');
 	proc.stderr.on('data', data => {
-//		console.log('stderr:', data);
+//	console.log('stderr:', data);
 		output += data
 			.toString()
 			.split(/\r?\n/g)
 			.join('\n')
+			.replace(/</g, '&lt;')
+			.replace(/>/g, '&gt;')
 			;
 	});
 
