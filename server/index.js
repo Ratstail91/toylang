@@ -16,6 +16,7 @@ function runToyCode(req, res) {
 			.toString()
 			.split(/\r?\n/g)
 			.join('\n')
+			.replace(/&/g, '&amp;')
 			.replace(/</g, '&lt;')
 			.replace(/>/g, '&gt;')
 			;
@@ -28,6 +29,7 @@ function runToyCode(req, res) {
 			.toString()
 			.split(/\r?\n/g)
 			.join('\n')
+			.replace(/&/g, '&amp;')
 			.replace(/</g, '&lt;')
 			.replace(/>/g, '&gt;')
 			;
